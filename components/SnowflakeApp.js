@@ -156,20 +156,20 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
           }
         `}</style>
         <div style={{margin: '19px auto 0', width: 142}}>
-          <a href="https://medium.com/" target="_blank">
+          <a href="https://www.shopify.com" target="_blank">
             <Wordmark />
           </a>
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
             <form>
-              <input
+              {/* <input
                   type="text"
                   className="name-input"
                   value={this.state.name}
                   onChange={e => this.setState({name: e.target.value})}
                   placeholder="Name"
-                  />
+                  /> */}
               <TitleSelector
                   milestoneByTrack={this.state.milestoneByTrack}
                   currentTitle={this.state.title}
