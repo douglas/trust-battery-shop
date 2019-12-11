@@ -14,7 +14,8 @@
   },
   "scripts": {
     "dev": "next",
-    "predeploy": "next build && next export",
+    "jekyll": "cp .nojekyll ./out",
+    "predeploy": "next build && next export && npm run jekyll",
     "deploy": "gh-pages -d out",
     "flow": "flow"
   },
