@@ -16,7 +16,7 @@
     "dev": "next",
     "jekyll": "cp .nojekyll ./out",
     "predeploy": "next build && next export && npm run jekyll",
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -d out -t",
     "flow": "flow"
   },
   "devDependencies": {
