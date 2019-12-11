@@ -91,7 +91,7 @@ type Tracks = {|
 
 export const tracks: Tracks = {
   "MOBILE": {
-    "displayName": "Mobile",
+    "displayName": "Keeps Promises",
     "category": "A",
     "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
     "milestones": [{
@@ -158,7 +158,7 @@ export const tracks: Tracks = {
   },
 
   "WEB_CLIENT": {
-    "displayName": "Web client",
+    "displayName": "Meets Deadlines",
     "category": "A",
     "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
     "milestones": [{
@@ -225,7 +225,7 @@ export const tracks: Tracks = {
   },
 
   "FOUNDATIONS": {
-    "displayName": "Foundations",
+    "displayName": "On Time",
     "category": "A",
     "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     "milestones": [{
@@ -292,7 +292,7 @@ export const tracks: Tracks = {
   },
 
   "SERVERS": {
-    "displayName": "Servers",
+    "displayName": "Dependable",
     "category": "A",
     "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
     "milestones": [{
@@ -359,7 +359,7 @@ export const tracks: Tracks = {
   },
 
   "PROJECT_MANAGEMENT": {
-    "displayName": "Project management",
+    "displayName": "Context expertise",
     "category": "B",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
     "milestones": [{
@@ -426,7 +426,7 @@ export const tracks: Tracks = {
   },
 
   "COMMUNICATION": {
-    "displayName": "Communication",
+    "displayName": "Passion",
     "category": "B",
     "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
     "milestones": [{
@@ -493,7 +493,7 @@ export const tracks: Tracks = {
   },
 
   "CRAFT": {
-    "displayName": "Craft",
+    "displayName": "Challenges Customers",
     "category": "B",
     "description": "Embodies and promotes practices to ensure excellent quality products and services",
     "milestones": [{
@@ -560,7 +560,7 @@ export const tracks: Tracks = {
   },
 
   "INITIATIVE": {
-    "displayName": "Initiative",
+    "displayName": "Humility",
     "category": "B",
     "description": "Challenges the status quo and effects positive organizational change outside of mandated work",
     "milestones": [{
@@ -627,7 +627,7 @@ export const tracks: Tracks = {
   },
 
   "CAREER_DEVELOPMENT": {
-    "displayName": "Career development",
+    "displayName": "Accepting",
     "category": "C",
     "description": "Provides strategic support to engineers to help them build the career they want",
     "milestones": [{
@@ -694,7 +694,7 @@ export const tracks: Tracks = {
   },
 
   "ORG_DESIGN": {
-    "displayName": "Org design",
+    "displayName": "Open",
     "category": "C",
     "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
     "milestones": [{
@@ -761,7 +761,7 @@ export const tracks: Tracks = {
   },
 
   "WELLBEING": {
-    "displayName": "Wellbeing",
+    "displayName": "Emotionally honest",
     "category": "C",
     "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
     "milestones": [{
@@ -828,7 +828,7 @@ export const tracks: Tracks = {
   },
 
   "ACCOMPLISHMENT": {
-    "displayName": "Accomplishment",
+    "displayName": "Authenticity",
     "category": "C",
     "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
     "milestones": [{
@@ -895,7 +895,7 @@ export const tracks: Tracks = {
   },
 
   "MENTORSHIP": {
-    "displayName": "Mentorship",
+    "displayName": "Focuses on others",
     "category": "D",
     "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
     "milestones": [{
@@ -962,7 +962,7 @@ export const tracks: Tracks = {
   },
 
   "EVANGELISM": {
-    "displayName": "Evangelism",
+    "displayName": "Listens",
     "category": "D",
     "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
     "milestones": [{
@@ -1029,7 +1029,7 @@ export const tracks: Tracks = {
   },
 
   "RECRUITING": {
-    "displayName": "Recruiting",
+    "displayName": "Caring and Compassionate",
     "category": "D",
     "description": "Strengthens Medium's team by bringing in excellent staff members",
     "milestones": [{
@@ -1096,7 +1096,7 @@ export const tracks: Tracks = {
   },
 
   "COMMUNITY": {
-    "displayName": "Community",
+    "displayName": "Collaborative",
     "category": "D",
     "description": "Builds community internally, gives of themself to the team, and champions and extols company values",
     "milestones": [{
