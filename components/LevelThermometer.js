@@ -40,6 +40,7 @@ class LevelThermometer extends React.Component<Props> {
     this.bottomAxisFn = d3.axisBottom()
       .scale(this.pointScale)
       .tickValues(Object.keys(pointsToLevels))
+      .tickFormat(points => points + '%')
   }
 
   componentDidMount() {
