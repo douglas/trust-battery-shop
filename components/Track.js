@@ -50,7 +50,7 @@ class Track extends React.Component<Props> {
           }
         `}</style>
         <h2>{track.displayName}</h2>
-        <p className="track-description">{track.description}</p>
+        <p className="track-description">{track.description.short}</p>
         <div style={{display: 'flex'}}>
           <table style={{flex: 0, marginRight: 50}}>
             <tbody>
@@ -68,7 +68,7 @@ class Track extends React.Component<Props> {
             </tbody>
           </table>
             <div style={{flex: 1}}>
-              <h3>{track.summary}</h3>
+              <h3>{track.description.detailed}</h3>
               <h4>Example behaviours:</h4>
               <ul>
                 {track.examples.map((example, i) => (

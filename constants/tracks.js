@@ -6,7 +6,10 @@ export type TrackId = 'KEEP_PROMISES' | 'MEET_DEADLINES' | 'ON_TIME' | 'DEPENDAB
 export type Track = {
   displayName: string,
   category: string, // TK categoryId type?
-  description: string,
+  description: {
+    "short": string,
+    "detailed": string
+  },
   summary: string,
   examples: string[]
 }
@@ -34,8 +37,10 @@ export const tracks: Tracks = {
   "KEEP_PROMISES": {
     "displayName": "Keep Promises",
     "category": "A",
-    "description": "Do what you said you would do",
-    "summary": "Do what you said you would do. Do not forget, get sidetracked or lose enthusiasm when you realise that keeping your word is harder than expected.",
+    "description": {
+      "short": "Do what you said you would do",
+      "detailed": "Do what you said you would do. Do not forget, get sidetracked or lose enthusiasm when you realise that keeping your word is harder than expected.",
+    },
     "examples": [
       "When assigned a task difficult to complete, communicate challenges and engage others when needed",
       "Follow through with what you said you would do despite facing challenges",
@@ -45,120 +50,150 @@ export const tracks: Tracks = {
   "MEET_DEADLINES": {
     "displayName": "Meet Deadlines",
     "category": "A",
-    "description": "Commits realistic timelines for deliverables and sticks to them",
-    "summary": "",
+    "description": {
+      "short": "Commits realistic timelines for deliverables and sticks to them",
+      "detailed": "Commit realistic timelines for deliverables and stick to them. Work proactively towards deadlines rather than chase them"
+    },
     "examples": []
   },
 
   "ON_TIME": {
     "displayName": "Be on Time",
     "category": "A",
-    "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
-    "summary": "",
+    "description": {
+      "short": "Show up on time for meetings and commitments",
+      "detailed": "Show up on time for meetings and commitments. Do not constantly rescheduling meetings after setting them up"
+    },
     "examples": []
   },
 
   "DEPENDABLE": {
     "displayName": "Dependability",
     "category": "A",
-    "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
-    "summary": "",
+    "description": {
+      "short": "Be consistent in the quality of your work",
+      "detailed": "Be consistent in the quality of your work; work with high levels of autonomy"
+    },
     "examples": []
   },
 
   "CONTENT_EXPERTISE": {
     "displayName": "Context expertise",
     "category": "B",
-    "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
-    "summary": "",
+    "description": {
+      "short": "Possess the knowledge, skills and abilities related to your craft",
+      "detailed": "Possess the knowledge, skills and abilities related to your craft"
+    },
     "examples": []
   },
 
   "PASSION": {
     "displayName": "Passion",
     "category": "B",
-    "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
-    "summary": "",
+    "description": {
+      "short": "Bring energy and enthusiasm to your craft",
+      "detailed": "The way you look, talk, talk about and embody your craft i.e. your energy and enthusiasm about the content you are sharing"
+    },
     "examples": []
   },
 
   "CHALLENGE_CUSTOMERS": {
     "displayName": "Challenge Customers",
     "category": "B",
-    "description": "Embodies and promotes practices to ensure excellent quality products and services",
-    "summary": "",
+    "description": {
+      "short": "Help others expand their consideration set",
+      "detailed": "Help others think beyond what they've currently anticipated or considered. Be a devil's advocate at crucial times"
+    },
     "examples": []
   },
 
   "HUMILITY": {
     "displayName": "Humility",
     "category": "B",
-    "description": "Challenges the status quo and effects positive organizational change outside of mandated work",
-    "summary": "",
+    "description": {
+      "short": "Acknowledge your context gaps quickly and directly",
+      "detailed": "Acknowledge your context gaps quickly and directly. Do not pretend to have information or context when you don't"
+    },
     "examples": []
   },
 
   "ACCEPTANCE": {
     "displayName": "Acceptance",
     "category": "C",
-    "description": "Provides strategic support to engineers to help them build the career they want",
-    "summary": "",
+    "description": {
+      "short": "Embrace what is without resistance",
+      "detailed": "Embrace what is without resistance. Be non-judgemental, curious and accepting regarding the perspectives of others",
+    },
     "examples": []
   },
 
   "OPENNESS": {
     "displayName": "Openness",
     "category": "C",
-    "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
-    "summary": "",
+    "description": {
+      "short": "Be imaginative, curious, and open-minded",
+      "detailed": "Enjoy trying new things. Be imaginative, curious, and open-minded",
+    },
     "examples": []
   },
 
   "EMOTIONAL_HONESTY": {
     "displayName": "Emotional Honesty",
     "category": "C",
-    "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
-    "summary": "",
+    "description": {
+      "short": "Be open about what you are thinking and feeling",
+      "detailed": "Be open about what you are thinking and feeling",
+    },
     "examples": []
   },
 
   "AUTHENTICITY": {
     "displayName": "Authenticity",
     "category": "C",
-    "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
-    "summary": "",
+    "description": {
+      "short": "Do not compromise your identity or interests to be accepted by others",
+      "detailed": "Do not compromise your identity or interests to be accepted others. Be true to yourself in the way you feel. Be aware of how you want to be seen.",
+    },
     "examples": []
   },
 
   "FOCUSSING_ON_OTHERS": {
     "displayName": "Focussing on others",
     "category": "D",
-    "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
-    "summary": "",
+    "description": {
+      "short": "Have a genuine desire to understand other's perspectives",
+      "detailed": "Have a genuine desire to understand other's perspectives, rather than putting your perspective first.",
+    },
     "examples": []
   },
 
   "LISTENING": {
     "displayName": "Listening",
     "category": "D",
-    "description": "Listen without interrupting or jumping to conclusions",
-    "summary": "Truly listen to a person without interrupting, finishing sentences or jumping quickly to conclusions",
+    "description": {
+      "short": "Listen without interrupting or jumping to conclusions",
+      "detailed": "Truly listen to a person without interrupting, finishing sentences or jumping quickly to conclusions"
+    },
     "examples": []
   },
 
   "COMPASSION": {
     "displayName": "Care and compassion",
     "category": "D",
-    "description": "Care about others and show you care",
-    "summary": "Genuinely care about the well-being of others around you and show that you care",
+    "description": {
+      "short": "Care about others and show you care",
+      "detailed": "Genuinely care about the well-being of others around you and show that you care"
+    },
     "examples": []
   },
 
   "COLLABORATION": {
     "displayName": "Collaboration",
     "category": "D",
-    "description": "Be collaborative rather than competitive with others",
-    "summary": "Be collaborative rather than competitive with others; keep common goals in perspective",
+    "description": {
+      "short": "Be collaborative rather than competitive with others",
+      "detailed": "Be collaborative rather than competitive with others; keep common goals in perspective"
+    },
     "examples": []
   },
 }
