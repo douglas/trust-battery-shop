@@ -47,26 +47,7 @@ export const milestones: Milestones = {
   4: { level: 4, description: 'Always', points: 4 }
 }
 
-export const pointsToLevels = {
-  '0': '1.1',
-  '3': '1.2',
-  '7': '1.3',
-  '10': '2.1',
-  '14': '2.2',
-  '17': '2.3',
-  '22': '3.1',
-  '26': '3.2',
-  '30': '3.3',
-  '35': '4.1',
-  '40': '4.2',
-  '44': '4.3',
-  '54': '5.1',
-  '100': '5.2'
-}
-
-export const maxLevel = 64
-
-
+export const maxPoints = 64
 
 export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
   set.add(tracks[trackId].category)
