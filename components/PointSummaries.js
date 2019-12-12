@@ -1,7 +1,7 @@
 // @flow
 
-import { pointsToLevels, trackIds, totalPointsFromMilestoneMap } from '../constants'
-import type { MilestoneMap } from '../constants'
+import { pointsToLevels, trackIds, totalPointsFromMilestoneMap } from '../constants/constants'
+import type { MilestoneMap } from '../constants/constants'
 import React from 'react'
 
 type Props = {

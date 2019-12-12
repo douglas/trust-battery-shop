@@ -1,8 +1,10 @@
 // @flow
 
-import { tracks, scores, categoryColorScale } from '../constants'
+import { scores, categoryColorScale } from '../constants/constants'
+import { tracks } from '../constants/tracks'
 import React from 'react'
-import type { MilestoneMap, TrackId, Milestone } from '../constants'
+import type { MilestoneMap, Milestone } from '../constants/constants'
+import type { TrackId } from '../constants/tracks'
 
 type Props = {
   milestoneByTrack: MilestoneMap,
@@ -61,7 +63,6 @@ class Track extends React.Component<Props> {
                         style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
                       {milestone}
                     </td>
-                    <td>Always</td>
                   </tr>
                 )
               })}

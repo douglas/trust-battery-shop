@@ -1,8 +1,9 @@
 // @flow
 
 import React from 'react'
-import { trackIds, tracks, categoryColorScale } from '../constants'
-import type { MilestoneMap, TrackId } from '../constants'
+import { categoryColorScale } from '../constants/constants'
+import { trackIds, tracks } from '../constants/tracks'
+import type { MilestoneMap, TrackId } from '../constants/constants'
 
 type Props = {
   milestoneByTrack: MilestoneMap,

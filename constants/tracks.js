@@ -1,74 +1,8 @@
-// @flow
-import * as d3 from 'd3'
-
 export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
-export type Score = 0 | 1 | 2 | 3 | 4
-export const scores = [0, 1, 2, 3, 4]
-
-export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'WEB_CLIENT': Milestone,
-  'FOUNDATIONS': Milestone,
-  'SERVERS': Milestone,
-  'PROJECT_MANAGEMENT': Milestone,
-  'COMMUNICATION': Milestone,
-  'CRAFT': Milestone,
-  'INITIATIVE': Milestone,
-  'CAREER_DEVELOPMENT': Milestone,
-  'ORG_DESIGN': Milestone,
-  'WELLBEING': Milestone,
-  'ACCOMPLISHMENT': Milestone,
-  'MENTORSHIP': Milestone,
-  'EVANGELISM': Milestone,
-  'RECRUITING': Milestone,
-  'COMMUNITY': Milestone
-}
-
-export type Milestone = {
-  level: Number,
-  description: string,
-  points: Number
-}
-
-type Milestones = {|
-  0: Milestone,
-  1: Milestone,
-  2: Milestone,
-  3: Milestone,
-  4: Milestone
-|}
-
-export const milestones: Milestones = {
-  0: { level: 0, description: 'Never', points: 0 },
-  1: { level: 1, description: 'Rarely', points: 1 },
-  2: { level: 2, description: 'Sometimes', points: 3 },
-  3: { level: 3, description: 'Often', points: 6 },
-  4: { level: 4, description: 'Always', points: 12 }
-}
-
-export const pointsToLevels = {
-  '0': '1.1',
-  '5': '1.2',
-  '11': '1.3',
-  '17': '2.1',
-  '23': '2.2',
-  '29': '2.3',
-  '36': '3.1',
-  '43': '3.2',
-  '50': '3.3',
-  '58': '4.1',
-  '66': '4.2',
-  '74': '4.3',
-  '90': '5.1',
-  '110': '5.2',
-  '135': '5.3',
-}
-
-export const maxLevel = 135
-
+  
 export type Track = {
   displayName: string,
   category: string, // TK categoryId type?
@@ -1174,48 +1108,3 @@ export const tracks: Tracks = {
 }
 
 export const trackIds: TrackId[] = Object.keys(tracks)
-
-export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
-  set.add(tracks[trackId].category)
-  return set
-}, new Set())
-
-export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
-  let pointsByCategory = new Map()
-  trackIds.forEach((trackId) => {
-    const milestone = milestoneMap[trackId]
-    const categoryId = tracks[trackId].category
-    let currentPoints = pointsByCategory.get(categoryId) || 0
-    pointsByCategory.set(categoryId, currentPoints + milestones[milestone].points)
-  })
-  return Array.from(categoryIds.values()).map(categoryId => {
-    const points = pointsByCategory.get(categoryId)
-    return { categoryId, points: pointsByCategory.get(categoryId) || 0 }
-  })
-}
-
-export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
-  trackIds.map(trackId => milestones[milestoneMap[trackId]].points).reduce((sum, addend) => (sum + addend), 0)
-
-export const categoryColorScale = d3.scaleOrdinal()
-  .domain(categoryIds)
-  .range(['#47C1BF', '#006FBB', '#EEC200', '#F49342'])
-
-export const titles = [
-  {label: 'Engineer I', minPoints: 0, maxPoints: 16},
-  {label: 'Engineer II', minPoints: 17, maxPoints: 35},
-  {label: 'Senior Engineer', minPoints: 36, maxPoints: 57},
-  {label: 'Group Lead', minPoints: 36, maxPoints: 57},
-  {label: 'Staff Engineer', minPoints: 58, maxPoints: 89},
-  {label: 'Senior Group Lead', minPoints: 58, maxPoints: 89},
-  {label: 'Principal Engineer', minPoints: 90},
-  {label: 'Director of Engineering', minPoints: 90}
-]
-
-export const eligibleTitles = (milestoneMap: MilestoneMap): string[] => {
-  const totalPoints = totalPointsFromMilestoneMap(milestoneMap)
-
-  return titles.filter(title => (title.minPoints === undefined || totalPoints >= title.minPoints)
-                             && (title.maxPoints === undefined || totalPoints <= title.maxPoints))
-    .map(title => title.label)
-}
