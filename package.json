@@ -1,9 +1,9 @@
 {
-  "name": "eng-growth",
+  "name": "trust-battery",
   "version": "0.0.1",
   "main": "index.js",
-  "repository": "https://github.com/Medium/eng-growth",
-  "homepage": "https://sjswoboda.github.io/snowflake/",
+  "repository": "https://github.com/sjswoboda/trust-battery",
+  "homepage": "https://sjswoboda.github.io/trust-battery/",
   "license": "MIT",
   "dependencies": {
     "d3": "^4.11.0",
