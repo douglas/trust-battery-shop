@@ -42,9 +42,9 @@ type Milestones = {|
 export const milestones: Milestones = {
   0: { level: 0, description: 'Never', points: 0 },
   1: { level: 1, description: 'Rarely', points: 1 },
-  2: { level: 2, description: 'Sometimes', points: 3 },
-  3: { level: 3, description: 'Often', points: 6 },
-  4: { level: 4, description: 'Always', points: 12 }
+  2: { level: 2, description: 'Sometimes', points: 2 },
+  3: { level: 3, description: 'Often', points: 3 },
+  4: { level: 4, description: 'Always', points: 4 }
 }
 
 export const pointsToLevels = {
@@ -61,11 +61,10 @@ export const pointsToLevels = {
   '40': '4.2',
   '44': '4.3',
   '54': '5.1',
-  '66': '5.2',
-  '81': '5.3',
+  '100': '5.2'
 }
 
-export const maxLevel = 81
+export const maxLevel = 64
 
 
 
@@ -83,8 +82,8 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
     pointsByCategory.set(categoryId, currentPoints + milestones[milestone].points)
   })
   return Array.from(categoryIds.values()).map(categoryId => {
-    const points = pointsByCategory.get(categoryId)
-    return { categoryId, points: pointsByCategory.get(categoryId) || 0 }
+    const points = pointsByCategory.get(categoryId) || 0
+    return { categoryId, points: points }
   })
 }
 

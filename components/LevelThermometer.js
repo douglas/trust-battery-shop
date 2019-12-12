@@ -1,7 +1,7 @@
 // @flow
 
 import * as d3 from 'd3'
-import { pointsToLevels, categoryPointsFromMilestoneMap, categoryColorScale, categoryIds } from '../constants/constants'
+import { pointsToLevels, categoryPointsFromMilestoneMap, categoryColorScale, categoryIds, maxLevel } from '../constants/constants'
 import React from 'react'
 import type { MilestoneMap } from '../constants'
 
@@ -29,18 +29,15 @@ class LevelThermometer extends React.Component<Props> {
     super(props)
 
     this.pointScale = d3.scaleLinear()
-      .domain([0, 135])
+      .domain([0, 100])
       .rangeRound([0, width - margins.left - margins.right]);
-
-    this.topAxisFn = d3.axisTop()
-      .scale(this.pointScale)
-      .tickValues(Object.keys(pointsToLevels))
-      .tickFormat(points => pointsToLevels[points])
 
     this.bottomAxisFn = d3.axisBottom()
       .scale(this.pointScale)
-      .tickValues(Object.keys(pointsToLevels))
+      .tickValues([5, 10, 25, 50, 75, 100])
       .tickFormat(points => points + '%')
+
+    this.topAxisFn = this.bottomAxisFn
   }
 
   componentDidMount() {
@@ -93,8 +90,9 @@ class LevelThermometer extends React.Component<Props> {
           <g transform={`translate(${margins.left},${margins.top})`}>
             {categoryPoints.map((categoryPoint, i) => {
               const x = this.pointScale(cumulativePoints)
-              const width = this.pointScale(cumulativePoints + categoryPoint.points) - x
-              cumulativePoints += categoryPoint.points
+              const categoryPercent = (categoryPoint.points / 64) * 100
+              const width = this.pointScale(cumulativePoints + categoryPercent) - x
+              cumulativePoints += categoryPercent
               return (i != lastCategoryIndex ?
                 <rect
                     key={categoryPoint.categoryId}
