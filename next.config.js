@@ -1,3 +1,3 @@
 module.exports = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/snowflake' : ''
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/trust-battery' : ''
 }
