@@ -16,7 +16,6 @@ class Track extends React.Component<Props> {
   render() {
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
-    const currentMilestone = track.milestones[currentMilestoneId - 1]
     return (
       <div className="track">
         <style jsx>{`
@@ -68,23 +67,15 @@ class Track extends React.Component<Props> {
               })}
             </tbody>
           </table>
-          {currentMilestone ? (
             <div style={{flex: 1}}>
-              <h3>{currentMilestone.summary}</h3>
-              <h4>Example behaviors:</h4>
+              <h3>{track.summary}</h3>
+              <h4>Example behaviours:</h4>
               <ul>
-                {currentMilestone.signals.map((signal, i) => (
-                  <li key={i}>{signal}</li>
-                ))}
-              </ul>
-              <h4>Example tasks:</h4>
-              <ul>
-                {currentMilestone.examples.map((example, i) => (
+                {track.examples.map((example, i) => (
                   <li key={i}>{example}</li>
                 ))}
               </ul>
             </div>
-          ) : null}
         </div>
       </div>
     )
