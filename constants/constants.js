@@ -7,22 +7,22 @@ export type Score = 0 | 1 | 2 | 3 | 4
 export const scores = [0, 1, 2, 3, 4]
 
 export type MilestoneMap = {
-  'MOBILE': Milestone,
-  'WEB_CLIENT': Milestone,
-  'FOUNDATIONS': Milestone,
-  'SERVERS': Milestone,
-  'PROJECT_MANAGEMENT': Milestone,
-  'COMMUNICATION': Milestone,
-  'CRAFT': Milestone,
-  'INITIATIVE': Milestone,
-  'CAREER_DEVELOPMENT': Milestone,
-  'ORG_DESIGN': Milestone,
-  'WELLBEING': Milestone,
-  'ACCOMPLISHMENT': Milestone,
-  'MENTORSHIP': Milestone,
-  'EVANGELISM': Milestone,
-  'RECRUITING': Milestone,
-  'COMMUNITY': Milestone
+  'KEEP_PROMISES': Milestone,
+  'MEET_DEADLINES': Milestone,
+  'ON_TIME': Milestone,
+  'DEPENDABLE': Milestone,
+  'CONTENT_EXPERTISE': Milestone,
+  'PASSION': Milestone,
+  'CHALLENGE_CUSTOMERS': Milestone,
+  'HUMILITY': Milestone,
+  'ACCEPTANCE': Milestone,
+  'OPENNESS': Milestone,
+  'EMOTIONAL_HONESTY': Milestone,
+  'AUTHENTICITY': Milestone,
+  'FOCUSSING_ON_OTHERS': Milestone,
+  'LISTENING': Milestone,
+  'COMPASSION': Milestone,
+  'COLLABORATION': Milestone
 }
 
 export type Milestone = {

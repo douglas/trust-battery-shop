@@ -1,7 +1,7 @@
-export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
-  'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
-  'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
-  'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
+export type TrackId = 'KEEP_PROMISES' | 'MEET_DEADLINES' | 'ON_TIME' | 'DEPENDABLE' |
+  'CONTENT_EXPERTISE' | 'PASSION' | 'CHALLENGE_CUSTOMERS' | 'HUMILITY' |
+  'ACCEPTANCE' | 'OPENNESS' | 'EMOTIONAL_HONESTY' | 'AUTHENTICITY' |
+  'FOCUSSING_ON_OTHERS' | 'LISTENING' | 'COMPASSION' | 'COLLABORATION'
   
 export type Track = {
   displayName: string,
@@ -12,26 +12,26 @@ export type Track = {
 }
 
 type Tracks = {|
-  'MOBILE': Track,
-  'WEB_CLIENT': Track,
-  'FOUNDATIONS': Track,
-  'SERVERS': Track,
-  'PROJECT_MANAGEMENT': Track,
-  'COMMUNICATION': Track,
-  'CRAFT': Track,
-  'INITIATIVE': Track,
-  'CAREER_DEVELOPMENT': Track,
-  'ORG_DESIGN': Track,
-  'WELLBEING': Track,
-  'ACCOMPLISHMENT': Track,
-  'MENTORSHIP': Track,
-  'EVANGELISM': Track,
-  'RECRUITING': Track,
-  'COMMUNITY': Track
+  'KEEP_PROMISES': Track,
+  'MEET_DEADLINES': Track,
+  'ON_TIME': Track,
+  'DEPENDABLE': Track,
+  'CONTENT_EXPERTISE': Track,
+  'PASSION': Track,
+  'CHALLENGE_CUSTOMERS': Track,
+  'HUMILITY': Track,
+  'ACCEPTANCE': Track,
+  'OPENNESS': Track,
+  'EMOTIONAL_HONESTY': Track,
+  'AUTHENTICITY': Track,
+  'FOCUSSING_ON_OTHERS': Track,
+  'LISTENING': Track,
+  'COMPASSION': Track,
+  'COLLABORATION': Track
 |}
 
 export const tracks: Tracks = {
-  "MOBILE": {
+  "KEEP_PROMISES": {
     "displayName": "Keep Promises",
     "category": "A",
     "description": "Do what you said you would do",
@@ -42,31 +42,31 @@ export const tracks: Tracks = {
     ]
   },
 
-  "WEB_CLIENT": {
-    "displayName": "Meets Deadlines",
+  "MEET_DEADLINES": {
+    "displayName": "Meet Deadlines",
     "category": "A",
     "description": "Commits realistic timelines for deliverables and sticks to them",
     "summary": "",
     "examples": []
   },
 
-  "FOUNDATIONS": {
-    "displayName": "On Time",
+  "ON_TIME": {
+    "displayName": "Be on Time",
     "category": "A",
     "description": "Develops expertise in foundational systems, such as deployments, pipelines, databases and machine learning",
     "summary": "",
     "examples": []
   },
 
-  "SERVERS": {
-    "displayName": "Dependable",
+  "DEPENDABLE": {
+    "displayName": "Dependability",
     "category": "A",
     "description": "Develops expertise in server side engineering, using technologies such as Go, NodeJS, or Scala",
     "summary": "",
     "examples": []
   },
 
-  "PROJECT_MANAGEMENT": {
+  "CONTENT_EXPERTISE": {
     "displayName": "Context expertise",
     "category": "B",
     "description": "Delivers well-scoped programs of work that meet their goals, on time, to budget, harmoniously",
@@ -74,7 +74,7 @@ export const tracks: Tracks = {
     "examples": []
   },
 
-  "COMMUNICATION": {
+  "PASSION": {
     "displayName": "Passion",
     "category": "B",
     "description": "Shares the right amount of information with the right people, at the right time, and listens effectively",
@@ -82,15 +82,15 @@ export const tracks: Tracks = {
     "examples": []
   },
 
-  "CRAFT": {
-    "displayName": "Challenges Customers",
+  "CHALLENGE_CUSTOMERS": {
+    "displayName": "Challenge Customers",
     "category": "B",
     "description": "Embodies and promotes practices to ensure excellent quality products and services",
     "summary": "",
     "examples": []
   },
 
-  "INITIATIVE": {
+  "HUMILITY": {
     "displayName": "Humility",
     "category": "B",
     "description": "Challenges the status quo and effects positive organizational change outside of mandated work",
@@ -98,31 +98,31 @@ export const tracks: Tracks = {
     "examples": []
   },
 
-  "CAREER_DEVELOPMENT": {
-    "displayName": "Accepting",
+  "ACCEPTANCE": {
+    "displayName": "Acceptance",
     "category": "C",
     "description": "Provides strategic support to engineers to help them build the career they want",
     "summary": "",
     "examples": []
   },
 
-  "ORG_DESIGN": {
-    "displayName": "Open",
+  "OPENNESS": {
+    "displayName": "Openness",
     "category": "C",
     "description": "Defines processes and structures that enables the strong growth and execution of a diverse eng organization",
     "summary": "",
     "examples": []
   },
 
-  "WELLBEING": {
-    "displayName": "Emotionally honest",
+  "EMOTIONAL_HONESTY": {
+    "displayName": "Emotional Honesty",
     "category": "C",
     "description": "Supports the emotional well-being of group members in difficult times, and celebrates their successes",
     "summary": "",
     "examples": []
   },
 
-  "ACCOMPLISHMENT": {
+  "AUTHENTICITY": {
     "displayName": "Authenticity",
     "category": "C",
     "description": "Inspires day to day excellence, maximises potential and effectively resolves performance issues with compassion",
@@ -130,35 +130,35 @@ export const tracks: Tracks = {
     "examples": []
   },
 
-  "MENTORSHIP": {
-    "displayName": "Focuses on others",
+  "FOCUSSING_ON_OTHERS": {
+    "displayName": "Focussing on others",
     "category": "D",
     "description": "Provides support to colleagues, spreads knowledge, and develops the team outside formal reporting structures",
     "summary": "",
     "examples": []
   },
 
-  "EVANGELISM": {
-    "displayName": "Listens",
+  "LISTENING": {
+    "displayName": "Listening",
     "category": "D",
-    "description": "Promotes Medium to the outside world and establishes it as an attractive and thoughtful place to work",
-    "summary": "",
+    "description": "Listen without interrupting or jumping to conclusions",
+    "summary": "Truly listen to a person without interrupting, finishing sentences or jumping quickly to conclusions",
     "examples": []
   },
 
-  "RECRUITING": {
-    "displayName": "Caring and Compassionate",
+  "COMPASSION": {
+    "displayName": "Care and compassion",
     "category": "D",
-    "description": "Strengthens Medium's team by bringing in excellent staff members",
-    "summary": "",
+    "description": "Care about others and show you care",
+    "summary": "Genuinely care about the well-being of others around you and show that you care",
     "examples": []
   },
 
-  "COMMUNITY": {
-    "displayName": "Collaborative",
+  "COLLABORATION": {
+    "displayName": "Collaboration",
     "category": "D",
-    "description": "Builds community internally, gives of themself to the team, and champions and extols company values",
-    "summary": "",
+    "description": "Be collaborative rather than competitive with others",
+    "summary": "Be collaborative rather than competitive with others; keep common goals in perspective",
     "examples": []
   },
 }

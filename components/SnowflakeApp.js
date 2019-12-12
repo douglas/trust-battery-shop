@@ -52,24 +52,24 @@ const emptyState = (): SnowflakeAppState => {
     name: '',
     title: '',
     milestoneByTrack: {
-      'MOBILE': 0,
-      'WEB_CLIENT': 0,
-      'FOUNDATIONS': 0,
-      'SERVERS': 0,
-      'PROJECT_MANAGEMENT': 0,
-      'COMMUNICATION': 0,
-      'CRAFT': 0,
-      'INITIATIVE': 0,
-      'CAREER_DEVELOPMENT': 0,
-      'ORG_DESIGN': 0,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 0,
-      'MENTORSHIP': 0,
-      'EVANGELISM': 0,
-      'RECRUITING': 0,
-      'COMMUNITY': 0
+      'KEEP_PROMISES': 0,
+      'MEET_DEADLINES': 0,
+      'ON_TIME': 0,
+      'DEPENDABLE': 0,
+      'CONTENT_EXPERTISE': 0,
+      'PASSION': 0,
+      'CHALLENGE_CUSTOMERS': 0,
+      'HUMILITY': 0,
+      'ACCEPTANCE': 0,
+      'OPENNESS': 0,
+      'EMOTIONAL_HONESTY': 0,
+      'AUTHENTICITY': 0,
+      'FOCUSSING_ON_OTHERS': 0,
+      'LISTENING': 0,
+      'COMPASSION': 0,
+      'COLLABORATION': 0
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'KEEP_PROMISES'
   }
 }
 
@@ -78,24 +78,24 @@ const defaultState = (): SnowflakeAppState => {
     name: 'Cersei Lannister',
     title: 'Staff Engineer',
     milestoneByTrack: {
-      'MOBILE': 1,
-      'WEB_CLIENT': 2,
-      'FOUNDATIONS': 3,
-      'SERVERS': 2,
-      'PROJECT_MANAGEMENT': 4,
-      'COMMUNICATION': 1,
-      'CRAFT': 1,
-      'INITIATIVE': 4,
-      'CAREER_DEVELOPMENT': 3,
-      'ORG_DESIGN': 2,
-      'WELLBEING': 0,
-      'ACCOMPLISHMENT': 4,
-      'MENTORSHIP': 2,
-      'EVANGELISM': 2,
-      'RECRUITING': 3,
-      'COMMUNITY': 0
+      'KEEP_PROMISES': 2,
+      'MEET_DEADLINES': 3,
+      'ON_TIME': 3,
+      'DEPENDABLE': 3,
+      'CONTENT_EXPERTISE': 4,
+      'PASSION': 4,
+      'CHALLENGE_CUSTOMERS': 3,
+      'HUMILITY': 2,
+      'ACCEPTANCE': 1,
+      'OPENNESS': 4,
+      'EMOTIONAL_HONESTY': 2,
+      'AUTHENTICITY': 4,
+      'FOCUSSING_ON_OTHERS': 2,
+      'LISTENING': 2,
+      'COMPASSION': 3,
+      'COLLABORATION': 3
     },
-    focusedTrackId: 'MOBILE'
+    focusedTrackId: 'KEEP_PROMISES'
   }
 }
 
