@@ -5,7 +5,8 @@ export type TrackId = 'MOBILE' | 'WEB_CLIENT' | 'FOUNDATIONS' | 'SERVERS' |
   'PROJECT_MANAGEMENT' | 'COMMUNICATION' | 'CRAFT' | 'INITIATIVE' |
   'CAREER_DEVELOPMENT' | 'ORG_DESIGN' | 'WELLBEING' | 'ACCOMPLISHMENT' |
   'MENTORSHIP' | 'EVANGELISM' | 'RECRUITING' | 'COMMUNITY'
-export type Milestone = 0 | 1 | 2 | 3 | 4 | 5
+export type Score = 0 | 1 | 2 | 3 | 4
+export const scores = [0, 1, 2, 3, 4]
 
 export type MilestoneMap = {
   'MOBILE': Milestone,
@@ -25,17 +26,27 @@ export type MilestoneMap = {
   'RECRUITING': Milestone,
   'COMMUNITY': Milestone
 }
-export const milestones = [0, 1, 2, 3, 4]
 
-export const milestoneToPoints = (milestone: Milestone): number => {
-  switch (milestone) {
-    case 0: return 0
-    case 1: return 1
-    case 2: return 3
-    case 3: return 6
-    case 4: return 12
-    default: return 0
-  }
+export type Milestone = {
+  level: Number,
+  description: string,
+  points: Number
+}
+
+type Milestones = {|
+  0: Milestone,
+  1: Milestone,
+  2: Milestone,
+  3: Milestone,
+  4: Milestone
+|}
+
+export const milestones: Milestones = {
+  0: { level: 0, description: 'Never', points: 0 },
+  1: { level: 1, description: 'Rarely', points: 1 },
+  2: { level: 2, description: 'Sometimes', points: 3 },
+  3: { level: 3, description: 'Often', points: 6 },
+  4: { level: 4, description: 'Always', points: 12 }
 }
 
 export const pointsToLevels = {
@@ -92,7 +103,7 @@ export const tracks: Tracks = {
   "MOBILE": {
     "displayName": "Keeps Promises",
     "category": "A",
-    "description": "Develops expertise in native mobile platform engineering, such as iOS or Android",
+    "description": "Does what they said they will do",
     "milestones": [{
       "summary": "Works effectively within established iOS or Android architectures, following current best practices",
       "signals": [
@@ -159,7 +170,7 @@ export const tracks: Tracks = {
   "WEB_CLIENT": {
     "displayName": "Meets Deadlines",
     "category": "A",
-    "description": "Develops expertise in web client technologies, such as HTML, CSS, and JavaScript",
+    "description": "Commits realistic timelines for deliverables and sticks to them",
     "milestones": [{
       "summary": "Works effectively within established web client architectures, following current best practices",
       "signals": [
@@ -1175,7 +1186,7 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
     const milestone = milestoneMap[trackId]
     const categoryId = tracks[trackId].category
     let currentPoints = pointsByCategory.get(categoryId) || 0
-    pointsByCategory.set(categoryId, currentPoints + milestoneToPoints(milestone))
+    pointsByCategory.set(categoryId, currentPoints + milestones[milestone].points)
   })
   return Array.from(categoryIds.values()).map(categoryId => {
     const points = pointsByCategory.get(categoryId)
@@ -1184,8 +1195,7 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
 }
 
 export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
-  trackIds.map(trackId => milestoneToPoints(milestoneMap[trackId]))
-    .reduce((sum, addend) => (sum + addend), 0)
+  trackIds.map(trackId => milestones[milestoneMap[trackId]].points).reduce((sum, addend) => (sum + addend), 0)
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
