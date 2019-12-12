@@ -1471,22 +1471,22 @@ var milestones = {
 };
 var pointsToLevels = {
   '0': '1.1',
-  '5': '1.2',
-  '11': '1.3',
-  '17': '2.1',
-  '23': '2.2',
-  '29': '2.3',
-  '36': '3.1',
-  '43': '3.2',
-  '50': '3.3',
-  '58': '4.1',
-  '66': '4.2',
-  '74': '4.3',
-  '90': '5.1',
-  '110': '5.2',
-  '135': '5.3'
+  '3': '1.2',
+  '7': '1.3',
+  '10': '2.1',
+  '14': '2.2',
+  '17': '2.3',
+  '22': '3.1',
+  '26': '3.2',
+  '30': '3.3',
+  '35': '4.1',
+  '40': '4.2',
+  '44': '4.3',
+  '54': '5.1',
+  '66': '5.2',
+  '81': '5.3'
 };
-var maxLevel = 135;
+var maxLevel = 81;
 var categoryIds = _constants_tracks__WEBPACK_IMPORTED_MODULE_4__["trackIds"].reduce(function (set, trackId) {
   set.add(_constants_tracks__WEBPACK_IMPORTED_MODULE_4__["tracks"][trackId].category);
   return set;
