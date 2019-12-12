@@ -47,6 +47,7 @@ export const milestones: Milestones = {
   4: { level: 4, description: 'Always', points: 4 }
 }
 
+export const thermometerIncrements = [10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, 100]
 export const maxPoints = 64
 
 export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {

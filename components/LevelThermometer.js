@@ -1,7 +1,7 @@
 // @flow
 
 import * as d3 from 'd3'
-import { categoryPointsFromMilestoneMap, categoryColorScale, categoryIds, maxPoints } from '../constants/constants'
+import { categoryPointsFromMilestoneMap, categoryColorScale, categoryIds, maxPoints, thermometerIncrements } from '../constants/constants'
 import React from 'react'
 import type { MilestoneMap } from '../constants'
 
@@ -34,7 +34,7 @@ class LevelThermometer extends React.Component<Props> {
 
     this.bottomAxisFn = d3.axisBottom()
       .scale(this.pointScale)
-      .tickValues([5, 10, 25, 50, 75, 100])
+      .tickValues(thermometerIncrements)
       .tickFormat(points => points + '%')
 
     this.topAxisFn = this.bottomAxisFn
