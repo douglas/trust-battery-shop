@@ -15,8 +15,6 @@ import React from 'react'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
-  name: string,
-  title: string,
   focusedTrackId: TrackId,
 }
 
@@ -46,8 +44,6 @@ const coerceMilestone = (value: number): Milestone => {
 
 const emptyState = (): SnowflakeAppState => {
   return {
-    name: '',
-    title: '',
     milestoneByTrack: {
       'KEEP_PROMISES': 0,
       'MEET_DEADLINES': 0,
@@ -72,8 +68,6 @@ const emptyState = (): SnowflakeAppState => {
 
 const defaultState = (): SnowflakeAppState => {
   return {
-    name: 'Cersei Lannister',
-    title: 'Staff Engineer',
     milestoneByTrack: {
       'KEEP_PROMISES': 2,
       'MEET_DEADLINES': 3,
