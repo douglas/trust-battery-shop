@@ -38,6 +38,10 @@ class TrackSelector extends React.Component<Props> {
             text-align: center;
             font-size: 9px;
           }
+          .track-selector-category-label {
+            text-align: center;
+            font-size: 11px;
+          }
         `}</style>
         <tbody>
           <tr>
@@ -55,6 +59,20 @@ class TrackSelector extends React.Component<Props> {
                 {this.props.milestoneByTrack[trackId]}
               </td>
             ))}
+          </tr>
+          <tr>
+            <td colspan="4" className="track-selector-category-label" style={{color: categoryColorScale('A')}}>
+              Reliability
+            </td>
+            <td colspan="4" className="track-selector-category-label" style={{color: categoryColorScale('B')}}>
+              Credibility
+            </td>
+            <td colspan="4" className="track-selector-category-label" style={{color: categoryColorScale('C')}}>
+              Intimacy
+            </td>
+            <td colspan="4" className="track-selector-category-label" style={{color: categoryColorScale('D')}}>
+              Self-Orientation
+            </td>
           </tr>
         </tbody>
       </table>
