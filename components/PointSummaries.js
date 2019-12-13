@@ -10,12 +10,12 @@ type Props = {
 
 class PointSummaries extends React.Component<Props> {
   render() {
-    const totalPoints = (((totalPointsFromMilestoneMap(this.props.milestoneByTrack)) / maxPoints) * 100).toFixed(0)
+    const trustBatteryTotal = totalPointsFromMilestoneMap(this.props.milestoneByTrack)
 
     const blocks = [
       {
         label: 'Trust Battery',
-        value: totalPoints
+        value: trustBatteryTotal
       }
     ]
 

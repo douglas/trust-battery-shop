@@ -69,8 +69,33 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
   })
 }
 
-export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number =>
-  trackIds.map(trackId => milestones[milestoneMap[trackId]].points).reduce((sum, addend) => (sum + addend), 0)
+function calculateScore(reliability, credibility, intimacy, self_orientation) {
+  let max_numerator = 16 * 3
+  let max_denominator = 16
+  let coefficient = max_numerator * max_denominator
+  return (reliability + credibility + intimacy) / (coefficient / self_orientation)
+}
+
+function getCategoryPoints(allPoints, categoryId) {
+  let pointsObj = allPoints.find(category => category.categoryId == categoryId)
+  if (pointsObj) {
+    return pointsObj.points
+  }
+  return 0
+}
+
+export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number => {
+  let allCategoryPoints = categoryPointsFromMilestoneMap(milestoneMap)
+  let reliability = getCategoryPoints(allCategoryPoints, 'A')
+  let credibility = getCategoryPoints(allCategoryPoints, 'B')
+  let intimacy = getCategoryPoints(allCategoryPoints, 'C')
+  let self_orientation = getCategoryPoints(allCategoryPoints, 'D')
+  
+  return (calculateScore(reliability, credibility, intimacy, self_orientation) * 100).toFixed(0)
+}
+
+
+  
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
