@@ -42,7 +42,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 4
     },
     __self: this
-  }, "Snowflake Model"), " by Medium."));
+  }, "Snowflake Model"), " by Medium. Version 1.2."));
 });
 
 /***/ }),
