@@ -1,6 +1,6 @@
 // @flow
 
-import { totalPointsFromMilestoneMap, maxPoints } from '../constants/constants'
+import { totalPointsFromMilestoneMap } from '../constants/constants'
 import type { MilestoneMap } from '../constants/constants'
 import React from 'react'
 

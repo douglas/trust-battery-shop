@@ -49,6 +49,10 @@ export const milestones: Milestones = {
 
 export const thermometerIncrements = [10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, 100]
 export const maxPoints = 64
+const maxCategoryPoints = 16
+const numerator_categories = 3
+const scoreAdjuster = (maxCategoryPoints * numerator_categories) * maxCategoryPoints
+
 
 export const categoryIds: Set<string> = trackIds.reduce((set, trackId) => {
   set.add(tracks[trackId].category)
@@ -70,10 +74,7 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
 }
 
 function calculateScore(reliability, credibility, intimacy, self_orientation) {
-  let max_numerator = 16 * 3
-  let max_denominator = 16
-  let coefficient = max_numerator * max_denominator
-  return (reliability + credibility + intimacy) / (coefficient / self_orientation)
+  return (reliability + credibility + intimacy) * self_orientation / scoreAdjuster
 }
 
 function getCategoryPoints(allPoints, categoryId) {
@@ -93,9 +94,6 @@ export const totalPointsFromMilestoneMap = (milestoneMap: MilestoneMap): number 
   
   return (calculateScore(reliability, credibility, intimacy, self_orientation) * 100).toFixed(0)
 }
-
-
-  
 
 export const categoryColorScale = d3.scaleOrdinal()
   .domain(categoryIds)
