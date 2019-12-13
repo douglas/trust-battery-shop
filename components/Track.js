@@ -13,9 +13,20 @@ type Props = {
 }
 
 class Track extends React.Component<Props> {
+  
   render() {
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
+    function getMilestoneText(milestone) {
+      switch(milestone) {
+        case 0: return 'Never'
+        case 1: return 'Rarely'
+        case 2: return 'Sometimes'
+        case 3: return 'Often'
+        case 4: return 'Always'
+        default: return 'Never'
+      }
+    }
     return (
       <div className="track">
         <style jsx>{`
@@ -35,15 +46,17 @@ class Track extends React.Component<Props> {
           table {
             border-spacing: 3px;
           }
-          td {
+          td.milestone {
             line-height: 50px;
             width: 50px;
             text-align: center;
-            background: #eee;
             font-weight: bold;
             font-size: 24px;
             border-radius: 3px;
             cursor: pointer;
+          }
+          td.milestone-text {
+            color: #808080;
           }
           ul {
             line-height: 1.5em;
@@ -58,9 +71,12 @@ class Track extends React.Component<Props> {
                 const isMet = milestone <= currentMilestoneId
                 return (
                   <tr key={milestone}>
-                    <td onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
-                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : undefined}}>
+                    <td className='milestone' onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
+                        style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : '#eee'}}>
                       {milestone}
+                    </td>
+                    <td className='milestone-text'>
+                      {getMilestoneText(milestone)}
                     </td>
                   </tr>
                 )
