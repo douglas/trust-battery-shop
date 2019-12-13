@@ -71,11 +71,11 @@ class Track extends React.Component<Props> {
                 const isMet = milestone <= currentMilestoneId
                 return (
                   <tr key={milestone}>
-                    <td className='milestone' onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
+                    <td className="milestone" onClick={() => this.props.handleTrackMilestoneChangeFn(this.props.trackId, milestone)}
                         style={{border: `4px solid ${milestone === currentMilestoneId ? '#000' : isMet ? categoryColorScale(track.category) : '#eee'}`, background: isMet ? categoryColorScale(track.category) : '#eee'}}>
                       {milestone}
                     </td>
-                    <td className='milestone-text'>
+                    <td className="milestone-text">
                       {getMilestoneText(milestone)}
                     </td>
                   </tr>
