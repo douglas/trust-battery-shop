@@ -1,6 +1,6 @@
 // @flow
 
-import { scores, categoryColorScale } from '../constants/constants'
+import { scores, categoryColorScale, milestones } from '../constants/constants'
 import { tracks } from '../constants/tracks'
 import React from 'react'
 import type { MilestoneMap, Milestone } from '../constants/constants'
@@ -17,16 +17,6 @@ class Track extends React.Component<Props> {
   render() {
     const track = tracks[this.props.trackId]
     const currentMilestoneId = this.props.milestoneByTrack[this.props.trackId]
-    function getMilestoneText(milestone) {
-      switch(milestone) {
-        case 0: return 'Never'
-        case 1: return 'Rarely'
-        case 2: return 'Sometimes'
-        case 3: return 'Often'
-        case 4: return 'Always'
-        default: return 'Never'
-      }
-    }
     return (
       <div className="track">
         <style jsx>{`
@@ -76,7 +66,7 @@ class Track extends React.Component<Props> {
                       {milestone}
                     </td>
                     <td className="milestone-text">
-                      {getMilestoneText(milestone)}
+                      {milestones[milestone].description}
                     </td>
                   </tr>
                 )
