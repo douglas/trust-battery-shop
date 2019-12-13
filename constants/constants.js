@@ -48,7 +48,6 @@ export const milestones: Milestones = {
 }
 
 export const thermometerIncrements = [10, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, 100]
-export const maxPoints = 64
 const maxCategoryPoints = 16
 const numerator_categories = 3
 const scoreAdjuster = (maxCategoryPoints * numerator_categories) * maxCategoryPoints
@@ -75,6 +74,10 @@ export const categoryPointsFromMilestoneMap = (milestoneMap: MilestoneMap) => {
 
 function calculateScore(reliability, credibility, intimacy, self_orientation) {
   return (reliability + credibility + intimacy) * self_orientation / scoreAdjuster
+}
+
+export function calculateCategoryScore(category_points, self_orientation) {
+  return ((category_points * self_orientation / (16 * 16) * 100).toFixed(0)) * (1/3)
 }
 
 function getCategoryPoints(allPoints, categoryId) {

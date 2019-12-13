@@ -1,7 +1,7 @@
 // @flow
 
 import * as d3 from 'd3'
-import { categoryPointsFromMilestoneMap, categoryColorScale, categoryIds, maxPoints, thermometerIncrements } from '../constants/constants'
+import { categoryPointsFromMilestoneMap, categoryColorScale, categoryIds, thermometerIncrements, calculateCategoryScore } from '../constants/constants'
 import React from 'react'
 import type { MilestoneMap } from '../constants'
 
@@ -88,9 +88,9 @@ class LevelThermometer extends React.Component<Props> {
         `}</style>
         <svg>
           <g transform={`translate(${margins.left},${margins.top})`}>
-            {categoryPoints.map((categoryPoint, i) => {
+            {categoryPoints.slice(0, 3).map((categoryPoint, i) => {
               const x = this.pointScale(cumulativePoints)
-              const categoryPercent = (categoryPoint.points / maxPoints) * 100
+              const categoryPercent = calculateCategoryScore(categoryPoint.points, categoryPoints[3].points)
               const width = this.pointScale(cumulativePoints + categoryPercent) - x
               cumulativePoints += categoryPercent
               return (i != lastCategoryIndex ?
