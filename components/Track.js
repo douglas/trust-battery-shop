@@ -38,7 +38,7 @@ class Track extends React.Component<Props> {
           }
           td.milestone {
             line-height: 50px;
-            width: 50px;
+            padding: 8px 24px 8px 24px;
             text-align: center;
             font-weight: bold;
             font-size: 24px;
