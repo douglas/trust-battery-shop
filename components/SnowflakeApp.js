@@ -7,12 +7,11 @@ import Track from '../components/Track'
 import Footer from '../components/Footer'
 import Wordmark from '../components/Wordmark'
 import LevelThermometer from '../components/LevelThermometer'
-import { eligibleTitles, milestones } from '../constants/constants'
+import { milestones } from '../constants/constants'
 import { trackIds, tracks } from '../constants/tracks'
 import PointSummaries from '../components/PointSummaries'
 import type { Milestone, MilestoneMap, TrackId } from '../constants/constants'
 import React from 'react'
-import TitleSelector from '../components/TitleSelector'
 
 type SnowflakeAppState = {
   milestoneByTrack: MilestoneMap,
@@ -162,19 +161,6 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
         </div>
         <div style={{display: 'flex'}}>
           <div style={{flex: 1}}>
-            <form>
-              {/* <input
-                  type="text"
-                  className="name-input"
-                  value={this.state.name}
-                  onChange={e => this.setState({name: e.target.value})}
-                  placeholder="Name"
-                  /> */}
-              {/* <TitleSelector
-                  milestoneByTrack={this.state.milestoneByTrack}
-                  currentTitle={this.state.title}
-                  setTitleFn={(title) => this.setTitle(title)} /> */}
-            </form>
             <PointSummaries milestoneByTrack={this.state.milestoneByTrack} />
             <LevelThermometer milestoneByTrack={this.state.milestoneByTrack} />
           </div>
@@ -206,11 +192,7 @@ class SnowflakeApp extends React.Component<Props, SnowflakeAppState> {
   handleTrackMilestoneChange(trackId: TrackId, milestone: Milestone) {
     const milestoneByTrack = this.state.milestoneByTrack
     milestoneByTrack[trackId] = milestone
-
-    const titles = eligibleTitles(milestoneByTrack)
-    const title = titles.indexOf(this.state.title) === -1 ? titles[0] : this.state.title
-
-    this.setState({ milestoneByTrack, focusedTrackId: trackId, title })
+    this.setState({ milestoneByTrack, focusedTrackId: trackId })
   }
 
   shiftFocusedTrack(delta: number) {
