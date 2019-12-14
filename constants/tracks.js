@@ -42,8 +42,8 @@ export const tracks: Tracks = {
       "detailed": "Do what you said you would do. Do not forget, get sidetracked or lose enthusiasm when you realise that keeping your word is harder than expected.",
     },
     "examples": [
-      "When assigned a task difficult to complete, communicate challenges and engage others when needed",
-      "Follow through with what you said you would do despite facing challenges",
+      "When assigned a difficult task, you communicates challenges and engage other when needed",
+      "You follow through with what you said you would do despite facing challenges"
     ]
   },
 
@@ -54,7 +54,10 @@ export const tracks: Tracks = {
       "short": "Commits realistic timelines for deliverables and sticks to them",
       "detailed": "Commit realistic timelines for deliverables and stick to them. Work proactively towards deadlines rather than chase them"
     },
-    "examples": []
+    "examples": [
+      "When you are tasked with completing something you do not have context for, you take your time to gather context, evaluate what needs to be done and set a realistic and achievable deadline",
+      "You consistently submit work on time that you comitted to or communicates challenges to meet the deadline ahead of time instead of asking for more time last minute"
+    ]
   },
 
   "ON_TIME": {
@@ -64,7 +67,11 @@ export const tracks: Tracks = {
       "short": "Show up on time for meetings and commitments",
       "detailed": "Show up on time for meetings and commitments. Do not constantly rescheduling meetings after setting them up"
     },
-    "examples": []
+    "examples": [
+      "You are on time for meetings and stick to the proposed schedule",
+      "You communicate well in advance if you're going to get delayed or want to reschedule",
+      "You value your time as well as that of others"
+    ]
   },
 
   "DEPENDABLE": {
@@ -74,7 +81,11 @@ export const tracks: Tracks = {
       "short": "Be consistent in the quality of your work",
       "detailed": "Be consistent in the quality of your work; work with high levels of autonomy"
     },
-    "examples": []
+    "examples": [
+      "You are consistent with the quality of your work",
+      "You can be counted on to deliver on your work with minimum supervision",
+      "You can operate with high levels of autonomy"
+    ]
   },
 
   "CONTENT_EXPERTISE": {
@@ -84,7 +95,10 @@ export const tracks: Tracks = {
       "short": "Possess the knowledge, skills and abilities related to your craft",
       "detailed": "Possess the knowledge, skills and abilities related to your craft"
     },
-    "examples": []
+    "examples": [
+      "You are open to learning and develop skills needed to get the job done",
+      "You take the time to gain context"
+    ]
   },
 
   "PASSION": {
@@ -94,7 +108,11 @@ export const tracks: Tracks = {
       "short": "Bring energy and enthusiasm to your craft",
       "detailed": "The way you look, talk, talk about and embody your craft i.e. your energy and enthusiasm about the content you are sharing"
     },
-    "examples": []
+    "examples": [
+      "You take on challenges enthusiastically and are excited about solving new problems",
+      "You are visibly passionate about your craft in the way you work",
+      "Your drive and enthusiasm towards the subject shows in the way you communicate and embody the craft"
+    ]
   },
 
   "CHALLENGE_CUSTOMERS": {
@@ -104,7 +122,11 @@ export const tracks: Tracks = {
       "short": "Help others expand their consideration set",
       "detailed": "Help others think beyond what they've currently anticipated or considered. Be a devil's advocate at crucial times"
     },
-    "examples": []
+    "examples": [
+      "You act as a trusted advisor to the customer/stakeholder",
+      "You constantly challenge customers/stakeholders to consider new ideas that will be beneficial and help in the long run"
+
+    ]
   },
 
   "HUMILITY": {
@@ -114,7 +136,10 @@ export const tracks: Tracks = {
       "short": "Acknowledge your context gaps quickly and directly",
       "detailed": "Acknowledge your context gaps quickly and directly. Do not pretend to have information or context when you don't"
     },
-    "examples": []
+    "examples": [
+      "You acknowledge your context gaps quickly when faced with a task that you do not have context for",
+      "You ask questions and are willing to learn when you do not have the context needed"
+    ]
   },
 
   "ACCEPTANCE": {
@@ -124,7 +149,11 @@ export const tracks: Tracks = {
       "short": "Embrace what is without resistance",
       "detailed": "Embrace what is without resistance. Be non-judgemental, curious and accepting regarding the perspectives of others",
     },
-    "examples": []
+    "examples": [
+      "You are accepting and non-judgemental of people’s views",
+      "People can open up to you without fear of being criticized",
+      "People can express themselves fully around you and be their best"
+    ]
   },
 
   "OPENNESS": {
@@ -134,7 +163,9 @@ export const tracks: Tracks = {
       "short": "Be imaginative, curious, and open-minded",
       "detailed": "Enjoy trying new things. Be imaginative, curious, and open-minded",
     },
-    "examples": []
+    "examples": [
+      "You are open to hearing new ideas instead of shutting them down"
+    ]
   },
 
   "EMOTIONAL_HONESTY": {
@@ -144,7 +175,11 @@ export const tracks: Tracks = {
       "short": "Be open about what you are thinking and feeling",
       "detailed": "Be open about what you are thinking and feeling",
     },
-    "examples": []
+    "examples": [
+      "You are excellent at communicating with others around you",
+      "You provide open and honest feedback to everyone",
+      "You do not hide what you think and how you feel"
+    ]
   },
 
   "AUTHENTICITY": {
@@ -154,7 +189,10 @@ export const tracks: Tracks = {
       "short": "Do not compromise your identity or interests to be accepted by others",
       "detailed": "Do not compromise your identity or interests to be accepted others. Be true to yourself in the way you feel. Be aware of how you want to be seen.",
     },
-    "examples": []
+    "examples": [
+      "You are authentic in what you say and how you say it",
+      "You share your honest opinion instead of changing your view to fit in with others"
+    ]
   },
 
   "FOCUSSING_ON_OTHERS": {
@@ -164,7 +202,10 @@ export const tracks: Tracks = {
       "short": "Have a genuine desire to understand other's perspectives",
       "detailed": "Have a genuine desire to understand other's perspectives, rather than putting your perspective first.",
     },
-    "examples": []
+    "examples": [
+      "You don't put your own agenda first (before that of others)",
+      "You are interested in understanding the other person’s perspective"
+    ]
   },
 
   "LISTENING": {
@@ -174,7 +215,11 @@ export const tracks: Tracks = {
       "short": "Listen without interrupting or jumping to conclusions",
       "detailed": "Truly listen to a person without interrupting, finishing sentences or jumping quickly to conclusions"
     },
-    "examples": []
+    "examples": [
+      "You don't interrupt mid-conversation",
+      "You don’t jump to conclusions before hearing others out",
+      "You are genuinely interested in what others have to say"
+    ]
   },
 
   "COMPASSION": {
@@ -184,7 +229,9 @@ export const tracks: Tracks = {
       "short": "Care about others and show you care",
       "detailed": "Genuinely care about the well-being of others around you and show that you care"
     },
-    "examples": []
+    "examples": [
+      "You empathize with others when they are struggling with work or a personal tragedy"
+    ]
   },
 
   "COLLABORATION": {
@@ -194,7 +241,11 @@ export const tracks: Tracks = {
       "short": "Be collaborative rather than competitive with others",
       "detailed": "Be collaborative rather than competitive with others; keep common goals in perspective"
     },
-    "examples": []
+    "examples": [
+      "You keep the larger picture in mind than your own self interest",
+      "You focus on collaborating on a project by combining strengths than be focussed on your personal achievement",
+      "You prefer to not work in silos and seek diversity of opinion"
+    ]
   },
 }
 
