@@ -85,6 +85,10 @@ class LevelThermometer extends React.Component<Props> {
             width: ${width}px;
             height: ${height + 10}px;
           }
+
+          div {
+            text-align: center;
+          }
         `}</style>
         <svg>
           <g transform={`translate(${margins.left},${margins.top})`}>
@@ -117,7 +121,10 @@ class LevelThermometer extends React.Component<Props> {
                 />
           </g>
         </svg>
+        <div>
+        <img src="./static/trust-equation-full.png" alt="trust equation" width="400" /></div>
       </figure>
+      
     )
   }
 }
